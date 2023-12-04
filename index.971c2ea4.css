@@ -1,0 +1,68 @@
+body {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.stopwatch {
+  box-sizing: border-box;
+  border: 2px dotted #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  position: relative;
+}
+
+.stopwatch__axis {
+  box-sizing: border-box;
+  background-color: orange;
+  border-radius: 50%;
+  width: 5vmin;
+  max-width: 35px;
+  height: 5vmin;
+  max-height: 35px;
+}
+
+.stopwatch__minutes-hand {
+  transform-origin: 0;
+  z-index: -2;
+  background-color: #00f;
+  border-radius: 2px;
+  width: 30%;
+  height: 2vmin;
+  max-height: 15px;
+  animation: 60s linear infinite forwards hands;
+  position: absolute;
+  transform: translateX(50%)rotate(-90deg);
+}
+
+.stopwatch__seconds-hand {
+  transform-origin: 0;
+  z-index: -1;
+  background-color: green;
+  border-radius: 1px;
+  width: 50%;
+  height: 1vmin;
+  max-height: 10px;
+  animation: 5s linear infinite forwards hands;
+  position: absolute;
+  transform: translateX(50%)rotate(-90deg);
+}
+
+@keyframes hands {
+  from {
+    transform: translateX(50%)rotate(-90deg);
+  }
+
+  to {
+    transform: translateX(50%)rotate(270deg);
+  }
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */
